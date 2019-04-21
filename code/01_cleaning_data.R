@@ -14,3 +14,6 @@ opd.crimes <- read_csv(here("data","OPD_Crimes.csv"))
 opd.crimes <- 
         opd.crimes %>% 
         rename_all(tolower)
+
+orl.neighborhoods %>% 
+     merge(opd.crimes, by = c("nbhdid", "orlando neighborhoods"))
